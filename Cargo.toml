@@ -1,0 +1,21 @@
+[package]
+name = "arm64-compilation"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rustls = { version = "0.23", default-features = false, features = [
+	"std",
+	"aws_lc_rs",
+] }
+lambda_runtime = "0.14.2"
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+tokio = { version = "1.45.1", features = ["full", "test-util"] }
+cargo-lambda-macro = { git = "https://github.com/RockBacon9922/cargo-lambda-macro", branch = "main" }
+sst_sdk = "0.1.0"
+anyhow = "1.0.99"
+
+[[bin]]
+name = "demo"
+path = "src/demo.rs"
