@@ -14,6 +14,7 @@ export default $config({
       url: true,
       runtime: "rust",
       handler: ".demo",
+      architecture: "arm64",
     });
   },
 });
